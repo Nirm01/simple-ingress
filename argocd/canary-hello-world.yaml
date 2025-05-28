@@ -18,7 +18,7 @@ spec:
 
   service:
     port: 80
-    targetPort: 5678  # Optional, set if different from service port
+    targetPort: 9898  # Optional, set if different from service port
 
   analysis:
     interval: 1m
