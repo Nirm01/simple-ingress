@@ -1,20 +1,20 @@
 apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
-  name: hello-world
+  name: podinfo
   namespace: test
 spec:
   # Reference to your Deployment
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: hello-world
+    name: podinfo
 
   # Reference to the Ingress resource (must exist)
   ingressRef:
     apiVersion: networking.k8s.io/v1
     kind: Ingress
-    name: hello-world  # Must match your Ingress name
+    name: podinfo  # Must match your Ingress name
 
   service:
     port: 80
