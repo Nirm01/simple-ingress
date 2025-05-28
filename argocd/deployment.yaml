@@ -18,3 +18,10 @@ spec:
           image: ghcr.io/stefanprodan/podinfo:6.8.0
           ports:
             - containerPort: 9898
+          resources:
+            requests:
+              cpu: "10m"
+              memory: "10Mi"
+            limits:
+              cpu: "50m"
+              memory: "50Mi"
