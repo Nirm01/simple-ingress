@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-world
-  namespace: test
+  name: podinfo
+  namespace: test-flux
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: test.eu-01-a.internal.scayle-payments.com
+    - host: test-argo.eu-01-a.internal.scayle-payments.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: hello-world
+                name: podinfo
                 port:
                   number: 80

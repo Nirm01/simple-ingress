@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: podinfo
   namespace: test
 spec:
   selector:
-    app: hello-world
+    app: podinfo
   ports:
     - port: 80
-      targetPort: 5678
+      targetPort: 9898
