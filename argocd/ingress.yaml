@@ -6,6 +6,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: private
   rules:
     - host: test-argo.eu-01-a.internal.scayle-payments.com
       http:
